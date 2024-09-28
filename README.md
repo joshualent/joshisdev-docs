@@ -1,2 +1,2 @@
 # joshButWhy.github.io
-This is my personal website I work on inconsistently. 
+This is currently basically nothing
