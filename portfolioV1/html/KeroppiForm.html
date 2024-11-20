@@ -1,0 +1,84 @@
+<!--**********
+NAME: Joshua Lent
+DATE: 27 OCT 2024
+PROJ: Three
+DESC: Registration Form
+***********-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="scripts/scripts.js"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Keroppi Archeive Registration</title>
+</head>
+
+<body class="keroppi-form">
+
+  <!--Headers-->
+  <div class="home body-div">
+    <h1 class="center header">Keroppi Archeive Registration Form</h1>
+    <h2 class="center header">Register to become an official member of the Keroppi Archeive!</h2>
+    <form action=# method="get">
+      <!--Baeutiful form not nested in a table because I asked before class and it was ugly when I used a table-->
+
+      <fieldset class="personal-info">
+        <!--First fieldset which asks for personal info, username, and password -->
+        <label for="first-name">First Name: </label><input type="text" id="first-name" required>
+        <label for="last-name">Last Name: </label><input type="text" id="last-name" required>
+        <label for="username">Username: </label><input type="text" id="username" accesskey="u" required>
+        <label for="user-email">Email: </label><input type="email" id="user-email" accesskey="m" required>
+        <label for="user-age">Age: </label><input type="number" min="4" max="127" id="user-age" required>
+        <label for="user-password">Create New Password: </label><input type="password" minlength="8" maxlength="32"
+          id="user-password" required>
+      </fieldset>
+      <hr>
+      <fieldset class="extra-info">
+        <label for="referer"> How did you hear about us?</label>
+        <select id="referer" name="referer"  accesskey="r">
+          <option value="">(select one)</option>
+          <option value="1">AOL Chatrooms</option>
+          <option value="2">Discord eboy/egirl</option>
+          <option value="3">Renaissance Fair</option>
+          <option value="4">Flyer</option>
+        </select>
+
+        <label> Enter a bio: </label><textarea rows="3" cols="35" id="user-bio"
+          placeholder="I like One Piece and the fact that Hello Kitty is a human and not a cat keeps me up at night..." accesskey="b"></textarea>
+
+
+          <!--Multiple divs used as containers for aligning elements stylistically across the page-->
+        <div class="radio-buttons">
+          <div class="radio"><input type="radio" name="newsletter" id="subscribe-yes" value="subed" accesskey="y" checked><label
+              for="subscribe-yes"> I want to receive the monthly newsletter</label></div>
+          <div class="radio"><input type="radio" name="newsletter" id="subscribe-no" value="unsubed" accesskey="n"><label
+              for="subscribe-no"> I do not want to receive the monthly newsletter</label></div>
+        </div>
+        <br>
+        <div class="tos"><label for="tos"><input type="checkbox" id="tos" accesskey="t" value="tos" required> I agree to the <a
+              href="/html/tos.html" target="_blank" id="tos-link" >Terms of Service</a> </label></div> 
+        <br>
+
+          <!--Submit-Reset buttons-->
+        <div class="button-container">
+          <button type="submit" name="Submit" id="submit" class="reset-submit">
+            <img src="/images/SubmitButtonSized.png" alt="Submit">
+          </button>
+          <button type="reset" value="reset" id="reset" name="reset" class="reset-submit">
+            <img src="/images/resetButtonSized.png" alt="Reset">
+            <!--I understand how to use Da Button Factory at https://www.clickminded.com/button-generator/ i just like my buttons-->
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <!--Quick Thanks/Sources-->
+  <p id="thanks">Thanks to <a href="https://www.w3schools.com/">W3Schools</a> and <a
+      href="https://www.freecodecamp.org/">freeCodeCamp</a> for great resources on HTML Forms and CSS</p>
+</body>
+
+</html>

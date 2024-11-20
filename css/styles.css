@@ -1,0 +1,237 @@
+:root { /* Set css variable names in case I want to change color schemes. Credit W3Schools for the how to*/
+  --main-text-color: #38184C;
+  --main-background-color: #A0CD60;
+}
+body {
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #fff, #dfd);
+    color: #331100;
+    font-family: Calibri, sans-serif;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+
+.intro-header {
+
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.project {
+  display: inline-block;
+  width: calc(50% - 1px);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.proj-title {
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+.proj-img {
+  max-width: 600px;
+  text-align: center;
+  margin: 2rem auto;
+}
+/* Animation from W3Schools (Edited to work well here) */
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+footer, footer {
+  text-align: center;
+  font-size: 1.6rem;
+}
+footer a {
+  color: rgb(100, 100, 255);
+  text-decoration: none;
+}
+footer a:hover {
+  color: blue;
+}
+footer a:nth-of-type(1) {
+  margin-right: 5px;
+}
+footer a:nth-of-type(2) {
+  margin-left: 5px;
+}
+
+.alegreya{
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/* HANGMAN */
+body[class="hangman"] {
+  text-align: center;
+  font-size: 2rem;
+
+  .hangman-game {
+    display: none;
+  }
+
+  .hangman-buttons button {
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+  }
+
+  .settings {
+    display: none;
+    border: 3px solid #331100;
+    width: 60%;
+    margin: 5px auto;
+  }
+  
+  button {
+    border: none;
+    background: none;
+    vertical-align: middle;
+  }
+  label {
+    vertical-align: middle;
+  }
+  .character-guess {
+    vertical-align: middle;
+  }
+
+  .result-msg {
+    font-weight: bold;
+    display: block;
+  }
+  
+  #lives-text {
+    color: red;
+    font-size: 2rem;
+  }
+
+  .red {
+    color: red;
+  }
+}
+/* * * * * */
+
+
+/* Keroppi Form */
+body.keroppi-form, body.tos  {
+
+  color: var(--main-text-color);
+  background: none;
+  background-color: var(--main-background-color);
+  
+  font-family: Calibri;
+
+h1, h2 {
+  text-align: center;
+}
+
+.body-div { /* Format body content*/
+  margin: 0 auto;
+  min-width: 500px;
+  width: 50vw;
+}
+form {
+  font-size: 18px;
+  border: none;
+}
+fieldset {
+  border: none;
+}
+
+  /* Set user input elements to look nice and */
+input, select, textarea {
+  font-size: 20px;
+  width: 100%;
+  background-color: #D9D9D9;
+  color: #1F0802;
+  border-radius: 3px;
+  border: none;
+  margin: 3px 0 5px 0;
+}
+label {
+  font-size: 20px
+}
+
+  /* Formatting ofr TOS related elements*/
+#terms-header {
+  font-size: 5rem;
+}
+#tos-outline {
+  margin: 0 auto;
+  min-width: 500px;
+  width: 40vw;
+  border: black solid 2px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+#tos-outline p {
+  margin: 10px;
+}
+.tos {
+  text-align: center;
+  margin: 0 auto;
+}
+
+hr {
+  width: 95%;
+  border-color: var(--main-text-color);
+}
+
+  /* finaggle with layout for end of page eleemtns */
+input[type=radio], input[type=checkbox] {
+  margin-left: auto;
+
+  display: inline;
+  width: auto;
+}
+#tos-link {
+  text-decoration: none;
+}
+#tos-link:hover {
+  color: purple;
+}
+button {
+  border: none;
+  background: none;
+}
+.button-container {
+  text-align: center;
+}
+
+.reset-submit {
+
+  margin: 10px 10px;
+  display: inline-block;
+}
+
+
+
+#thanks {
+  margin: 50px auto 5px auto;
+  text-align: center;
+}
+.radio-buttons {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.radio {
+  display: inline;
+ margin: 0 10px;
+}
+}
+
+/* * * * * * * */
+
+

@@ -1,0 +1,133 @@
+<!--**********
+NAME: Joshua Lent
+DATE: IDK Nov 2024
+PROJ: Four
+DESC: Portfolio Website
+***********-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Afacad+Flux:slnt,wght@-1,100..1000&family=Alegreya:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Portfolio Project</title>
+</head>
+
+<body class="home">
+  <!--Top Nav-->
+  <div class="topnav" id="myTopnav">
+    <a href="#myTopnav">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects-header">Projects</a>
+    <a href="#contact">Contact Me</a>
+    <a href="javascript:void(0);" class="icon" onclick="topNavResponse()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!--Home/Introduction Message-->
+  <div id="introduction">
+    <h1>Hey, It's Josh</h1>
+    <h2 class="alegreya">Web Developer</h2>
+  </div>
+    <!-- About content -->
+  <div id="about">
+    <h3>About Me</h3>
+    <div class="about-content">
+      <a href="https://github.com/joshButWhy" target="_blank"><img class="about-left-img " src="/portfolioV1/images/coolDude.png" alt="My Github Profile"></a>
+    <p class="about-p">I'm currently a student at kalamazoo Valley Community College working towards a Bachelor's in Computer Science.
+      I have been interested in computers and tech my whole life and am excited about the career possibilities in
+      Computer Science.
+      <br><br>
+      I love to play video games. My favorite games are the ones my friends play, which happen to be Fortnite and
+      Minecraft. I am a huge fan of the the Kirby game franchise and enjoy a lot of Ninetendo games. I have played most
+      released kirby games, including the ones made before I was born, but am still working on comleting them some of
+      the older titles and have yet to try a few. Castlevania is also my jam.
+      <br><br>
+      I have a small collection of over 150 cds that is still gorwing. I mostly collect 90s and 00s hip-hop but own
+      music from other artists like Peter Gabriel and Weird Al Yankovic. Among my collection I have multiple CD-ROM
+      games because of my love of retro video games. I get most of my CDs at the Kalamazoo CD and Record Show and from
+       bargain sales at the Kalamazoo Public Library. As only becomes easier to stream current music it is harder to
+       justify spending up to $20 dollars on a new album, but I do eventually want to own some of the great albums being
+       made today.
+      <br><br>
+    </p>
+    <!-- Flex box container which contains two columns which contains images-->
+      <div class="about-gallery">
+        <div class="about-gallery-column">
+        <img src="/portfolioV1/images/kirbyReturnToDreamland.jpg" alt="">
+        <img src="/portfolioV1/images/kirbyPlanetRobobot.png" alt="">
+        <img src="/portfolioV1/images/kirbyAmazingMirror.jpg" alt="">
+      </div>
+      <div class="about-gallery-column">
+        <img src="/portfolioV1/images/castlevania-aria-of-sorrow.jpg" alt="">
+        <img src="/portfolioV1/images/ForeverStory.png" alt="">
+        <img src="/portfolioV1/images/Illmatic.jpg" alt="">
+      </div>
+      </div>
+  </div>
+  </div>
+
+  <!-- Projects Section -->
+  <h3 id="projects-header">Projects</h3>
+      <div id="projects">
+        
+        <div class="project">
+          <p><span class="project-title">Hangman</span></p>
+          <div class="project-pic"><a href="/html/hangman.html"><img src="/images/hangmanPic.png"  class="zoom" alt="sitting frog"></a>
+            
+          </div>
+          <div class="hangman-explanation">
+            <p>Enjoy the classic game of hangman in your browser written with JavaScript.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <p><span class="project-title">Registration Form</span></p>
+          <div class="project-pic"><a href="/html/KeroppiForm.html"><img src="/portfolioV1/images/keroppiFormPic.png" class="zoom"
+                alt="sitting frog"></a>
+            
+          </div>
+          <div class="project-explanation">
+            <p>Register for the Keroppi Archeive using an HTML Form.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <p><span class="project-title">Frog Site</span></p>
+          <div class="project-pic"><a href="/html/frogSite.html"><img src="/portfolioV1/images/keroppi.jpg" class="zoom"
+                alt="sitting frog"></a>
+            
+          </div>
+          <div class="hangman-explanation">
+            <p>One of my first web projects—enjoy a web 1.0 wiki experience!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact and footer region-->
+      <div id="contact">
+        <h3>Find me on Github</h3>
+        <p>I mostly stay off of Social Media but GitHub is a great place to see more of my work as I publicize it and
+          get
+          in contact with me</p>
+        <a href="https://github.com/joshButWhy" target="_blank"><img src="/images/github-mark.png" class="zoom" alt="GitHub"></a>
+      </div>
+      <footer>
+        <a href="mailto:me@example.com">me@example.com </a>
+        <a href="tel:+11234567890"> +1 (123) 456 7890</a> <br>
+        &copy; 2024 Joshua Lent
+
+      </footer>
+      <script src="scripts/script.js"></script>
+</body>
+
+</html>
