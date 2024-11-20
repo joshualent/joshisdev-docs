@@ -1,3 +1,3 @@
 # joshButWhy.github.io
-This is one of the first websites I have made and is not meant to be taken seriously.
-Here it is in its purest form.
+Currently this site is only for use to link to my past projects externally.
+It includes a rough main page and has my past projects witin.
