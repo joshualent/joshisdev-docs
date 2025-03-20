@@ -1,5 +1,6 @@
 site_name: My Docs
-site_url: https://joshbutwhy.github.io/
+site_url: https://wiki.joshualent.com
+site_dir: "site"
 theme:
   name: material
   palette: 
