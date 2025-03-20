@@ -25,7 +25,5 @@ jobs:
           path: .cache 
           restore-keys: |
             mkdocs-material-
-      - name: Disable Jekyll
-        run: echo "" > .nojekyll
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
