@@ -7,4 +7,5 @@ I'm interested in web development, so most of my documentation here is related t
 
 ## Explore
 
-- [Django](Django/index.md)
+## [Django](Django/index.md)
+## [Bootstrap](docs/bootstrap/index.md)
