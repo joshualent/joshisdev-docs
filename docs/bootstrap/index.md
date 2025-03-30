@@ -2,19 +2,20 @@
 ## About
 Bootstrap is the most popular CSS framework, most well known for it's responsive grid system that makes designing for multiple screensizes easy. Bootstrap css is mainly used by applying classes to your elemtents, which correspond to bootstrap's CSS styles. Bootstrap uses SASS, specifically scss, which can be customized depending on your delivery method for bootstrap. bootstrap can be installed with npm, accessed through a content delivery network, and mre. bootstrap is also well known for responsive navs, styled inputs, spacing utilities, many custom components, and more.
 
+## [Card](Input)
 ## [Grid](Grid.md)
 Bootstrap grid uses flexbox for responsive placement of elements. It uses containers which can contain multiple rows of content. Each row gets 12 column units that can be divided among elements using bootstrap classes. Grid also allows you to specify flex properties using classes, which further helps position elements.
 
 ## [Input elements](Input Elements)
 Bootstrap has default styling for many inputs, but you can specify these inputs with specific bootstrap classes for better styling
 
-## [Typography](Typography)
+## [Typography](Typography.md)
 Bootstrap helps you style text with default styles and utility classes
 
-## [images](Images)
+## [images](Images.md)
 Create responsive images and place them
 
-## [Utils](Utils)
+## [Utils](Utils.md)
 
 
 ## [Icons](https://icons.getbootstrap.com/)

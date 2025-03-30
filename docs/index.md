@@ -7,5 +7,11 @@ I'm interested in web development, so most of my documentation here is related t
 
 ## Explore
 
-## [Django](Django/index.md)
-## [Bootstrap](docs/bootstrap/index.md)
+## Front-end web
+## [Bootstrap](bootstrap/index.md)
+### [Sass](sass/index.md)
+
+## Other
+
+## [Vim](Vim/index)
+### [Django](Django/index.md)
