@@ -1,17 +1,15 @@
 site_name: My Docs
 site_url: https://wiki.joshualent.com
 site_dir: "site"
+site_author: Joshua Lent
+site_description: >-
+  My personal documentation on computer science, programming, and related subjects - Focus on web-development
+
+repo_name: joshualent/joshisdev-docs
+repo_url: https://github.com/joshualent/joshisdev-docs
+
+copyright: Copyright &copy; 2025 Joshua Lent
+
 theme:
   name: material
-  palette: 
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+ 
