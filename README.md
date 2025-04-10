@@ -11,3 +11,7 @@ List of topics to add to wiki (In rough order)
 - <mark>Bootstrap</mark>
 - Docker
 - React
+<details>
+  <summary>Show full text?</summary>
+  This is full text woah woo!
+</details>
