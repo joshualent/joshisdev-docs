@@ -8,10 +8,6 @@ List of topics to add to wiki (In rough order)
 - JavaScript
 - HTML
 - CSS
-- <mark>Bootstrap</mark>
+- Bootstrap
 - Docker
 - React
-<details>
-  <summary>Show full text?</summary>
-  This is full text woah woo!
-</details>
