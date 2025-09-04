@@ -19,15 +19,15 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: blue
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: purple
-      accent: indigo
+      primary: blue grey
+      accent: teal
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
