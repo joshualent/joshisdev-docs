@@ -17,6 +17,3 @@ Batteries included web framework for rapid development with Python using MVT, si
 ## Other
 ## [Vim](Vim/index.md)
 Fantastically efficient text editor commonly used by programmers.
-
-## [jQuery](jQuery/index.md)
-The OG JavaScript library. While outdated, it is still maintained and faster and easier than writing vanilla JavaScript, for cases where React or similar libraries aren't needed.

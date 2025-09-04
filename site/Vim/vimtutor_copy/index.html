@@ -1,0 +1,1946 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My personal documentation on computer science, programming, and related subjects - Focus on web-development">
+      
+      
+        <meta name="author" content="Joshua Lent">
+      
+      
+        <link rel="canonical" href="https://wiki.joshualent.com/Vim/vimtutor_copy/">
+      
+      
+        <link rel="prev" href="../Common%20Commands/">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Vimtutor copy - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vimtutor copy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/joshualent/joshisdev-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    joshualent/joshisdev-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/joshualent/joshisdev-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    joshualent/joshisdev-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    joshIsDev Docs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Bootstrap
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bootstrap
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootstrap/Grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootstrap/Images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootstrap/Input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootstrap/Typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bootstrap/Utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Django
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Django
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/Forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/URLs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    URLs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/Views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Views
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sass
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sass
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vim
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Common%20Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Common Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vimtutor copy
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Vimtutor copy</h1>
+
+<p>===============================================================================
+=    W e l c o m e   t o   t h e   V I M   T u t o r    -    Version 1.7      =
+===============================================================================</p>
+<pre><code> Vim is a very powerful editor that has many commands, too many to
+ explain in a tutor such as this.  This tutor is designed to describe
+ enough of the commands that you will be able to easily use Vim as
+ an all-purpose editor.
+
+ The approximate time required to complete the tutor is 30 minutes,
+ depending upon how much time is spent with experimentation.
+
+ ATTENTION:
+ The commands in the lessons will modify the text.  Make a copy of this
+ file to practice on (if you started "vimtutor" this is already a copy).
+
+ It is important to remember that this tutor is set up to teach by
+ use.  That means that you need to execute the commands to learn them
+ properly.  If you only read the text, you will forget the commands!
+
+ Now, make sure that your Caps-Lock key is NOT depressed and press
+ the   j   key enough times to move the cursor so that lesson 1.1
+ completely fills the screen.
+</code></pre>
+<pre><code>            Lesson 1.1:  MOVING THE CURSOR
+
+
+   ** To move the cursor, press the h,j,k,l keys as indicated. **
+         ^
+         k          Hint:  The h key is at the left and moves left.
+       &lt; h   l &gt;           The l key is at the right and moves right.
+         j             The j key looks like a down arrow.
+         v
+  1. Move the cursor around the screen until you are comfortable.
+
+  2. Hold down the down key (j) until it repeats.
+     Now you know how to move to the next lesson.
+
+  3. Using the down key, move to lesson 1.2.
+
+NOTE: If you are ever unsure about something you typed, press &lt;ESC&gt; to place
+      you in Normal mode.  Then retype the command you wanted.
+
+NOTE: The cursor keys should also work.  But using hjkl you will be able to
+      move around much faster, once you get used to it.  Really!
+
+</code></pre>
+<pre><code>            Lesson 1.2: EXITING VIM
+</code></pre>
+<p>!! NOTE: Before executing any of the steps below, read this entire lesson!!</p>
+<ol>
+<li>
+<p>Press the <ESC> key (to make sure you are in Normal mode).</p>
+</li>
+<li>
+<p>Type:  :q! <ENTER>.
+     This exits the editor, DISCARDING any changes you have made.</p>
+</li>
+<li>
+<p>Get back here by executing the command that got you into this tutor. That
+     might be:  vimtutor <ENTER></p>
+</li>
+<li>
+<p>If you have these steps memorized and are confident, execute steps
+     1 through 3 to exit and re-enter the editor.</p>
+</li>
+</ol>
+<p>NOTE:  :q! <ENTER>  discards any changes you made.  In a few lessons you
+       will learn how to save the changes to a file.</p>
+<ol>
+<li>Move the cursor down to lesson 1.3.</li>
+</ol>
+<pre><code>             Lesson 1.3: TEXT EDITING - DELETION
+
+
+       ** Press  x  to delete the character under the cursor. **
+
+  1. Move the cursor to the line below marked ---&gt;.
+
+  2. To fix the errors, move the cursor until it is on top of the
+     character to be deleted.
+
+  3. Press the  x  key to delete the unwanted character.
+
+  4. Repeat steps 2 through 4 until the sentence is correct.
+
+---&gt; The ccow jumpedd ovverr thhe mooon.
+
+  5. Now that the line is correct, go on to lesson 1.4.
+
+NOTE: As you go through this tutor, do not try to memorize, learn by usage.
+
+
+
+</code></pre>
+<pre><code>          Lesson 1.4: TEXT EDITING - INSERTION
+
+
+        ** Press  i  to insert text. **
+</code></pre>
+<ol>
+<li>
+<p>Move the cursor to the first line below marked ---&gt;.</p>
+</li>
+<li>
+<p>To make the first line the same as the second, move the cursor on top
+     of the character BEFORE which the text is to be inserted.</p>
+</li>
+<li>
+<p>Press  i  and type in the necessary additions.</p>
+</li>
+<li>
+<p>As each error is fixed press <ESC> to return to Normal mode.
+     Repeat steps 2 through 4 to correct the sentence.</p>
+</li>
+</ol>
+<p>---&gt; There is text misng this .
+---&gt; There is some text missing from this line.</p>
+<ol>
+<li>When you are comfortable inserting text move to lesson 1.5.</li>
+</ol>
+<pre><code>             Lesson 1.5: TEXT EDITING - APPENDING
+
+
+            ** Press  A  to append text. **
+
+  1. Move the cursor to the first line below marked ---&gt;.
+     It does not matter on what character the cursor is in that line.
+
+  2. Press  A  and type in the necessary additions.
+
+  3. As the text has been appended press &lt;ESC&gt; to return to Normal mode.
+
+  4. Move the cursor to the second line marked ---&gt; and repeat
+     steps 2 and 3 to correct this sentence.
+
+---&gt; There is some text missing from th
+     There is some text missing from this line.
+---&gt; There is also some text miss
+     There is also some text missing here.
+
+  5. When you are comfortable appending text move to lesson 1.6.
+
+</code></pre>
+<pre><code>         Lesson 1.6: EDITING A FILE
+
+        ** Use  :wq  to save a file and exit. **
+</code></pre>
+<p>!! NOTE: Before executing any of the steps below, read this entire lesson!!</p>
+<ol>
+<li>
+<p>If you have access to another terminal, do the following there.
+      Otherwise, exit this tutor as you did in lesson 1.2:  :q!</p>
+</li>
+<li>
+<p>At the shell prompt type this command:  vim file.txt <ENTER>
+     'vim' is the command to start the Vim editor, 'file.txt' is the name of
+     the file you wish to edit.  Use the name of a file that you can change.</p>
+</li>
+<li>
+<p>Insert and delete text as you learned in the previous lessons.</p>
+</li>
+<li>
+<p>Save the file with changes and exit Vim with:  :wq <ENTER></p>
+</li>
+<li>
+<p>If you have quit vimtutor in step 1 restart the vimtutor and move down to
+     the following summary.</p>
+</li>
+<li>
+<p>After reading the above steps and understanding them: do it.</p>
+</li>
+</ol>
+<pre><code>                   Lesson 1 SUMMARY
+
+
+  1. The cursor is moved using either the arrow keys or the hjkl keys.
+     h (left)   j (down)       k (up)       l (right)
+
+  2. To start Vim from the shell prompt type:  vim FILENAME &lt;ENTER&gt;
+
+  3. To exit Vim type:     &lt;ESC&gt;   :q!   &lt;ENTER&gt;  to trash all changes.
+         OR type:      &lt;ESC&gt;   :wq   &lt;ENTER&gt;  to save the changes.
+
+  4. To delete the character at the cursor type:  x
+
+  5. To insert or append text type:
+     i   type inserted text   &lt;ESC&gt;     insert before the cursor
+     A   type appended text   &lt;ESC&gt;         append after the line
+
+NOTE: Pressing &lt;ESC&gt; will place you in Normal mode or will cancel
+      an unwanted and partially completed command.
+
+Now continue with lesson 2.
+
+</code></pre>
+<pre><code>        Lesson 2.1: DELETION COMMANDS
+
+
+           ** Type  dw  to delete a word. **
+</code></pre>
+<ol>
+<li>
+<p>Press  <ESC>  to make sure you are in Normal mode.</p>
+</li>
+<li>
+<p>Move the cursor to the line below marked ---&gt;.</p>
+</li>
+<li>
+<p>Move the cursor to the beginning of a word that needs to be deleted.</p>
+</li>
+<li>
+<p>Type   dw   to make the word disappear.</p>
+</li>
+</ol>
+<p>NOTE: The letter  d  will appear on the last line of the screen as you type
+    it.  Vim is waiting for you to type  w .  If you see another character
+    than  d  you typed something wrong; press  <ESC>  and start over.</p>
+<p>---&gt; There are a some words fun that don't belong paper in this sentence.</p>
+<ol>
+<li>Repeat steps 3 and 4 until the sentence is correct and go to lesson 2.2.</li>
+</ol>
+<pre><code>              Lesson 2.2: MORE DELETION COMMANDS
+
+
+       ** Type  d$  to delete to the end of the line. **
+
+  1. Press  &lt;ESC&gt;  to make sure you are in Normal mode.
+
+  2. Move the cursor to the line below marked ---&gt;.
+
+  3. Move the cursor to the end of the correct line (AFTER the first . ).
+
+  4. Type    d$    to delete to the end of the line.
+
+---&gt; Somebody typed the end of this line twice. end of this line twice.
+
+
+  5. Move on to lesson 2.3 to understand what is happening.
+
+
+
+
+
+</code></pre>
+<pre><code>         Lesson 2.3: ON OPERATORS AND MOTIONS
+</code></pre>
+<p>Many commands that change text are made from an operator and a motion.
+  The format for a delete command with the  d  delete operator is as follows:</p>
+<pre><code>d   motion
+</code></pre>
+<p>Where:
+    d      - is the delete operator.
+    motion - is what the operator will operate on (listed below).</p>
+<p>A short list of motions:
+    w - until the start of the next word, EXCLUDING its first character.
+    e - to the end of the current word, INCLUDING the last character.
+    $ - to the end of the line, INCLUDING the last character.</p>
+<p>Thus typing  de  will delete from the cursor to the end of the word.</p>
+<p>NOTE:  Pressing just the motion while in Normal mode without an operator will
+       move the cursor as specified.</p>
+<pre><code>             Lesson 2.4: USING A COUNT FOR A MOTION
+
+
+   ** Typing a number before a motion repeats it that many times. **
+
+  1. Move the cursor to the start of the line below marked ---&gt;.
+
+  2. Type  2w  to move the cursor two words forward.
+
+  3. Type  3e  to move the cursor to the end of the third word forward.
+
+  4. Type  0  (zero) to move to the start of the line.
+
+  5. Repeat steps 2 and 3 with different numbers.
+
+---&gt; This is just a line with words you can move around in.
+
+  6. Move on to lesson 2.5.
+
+
+
+
+</code></pre>
+<pre><code>         Lesson 2.5: USING A COUNT TO DELETE MORE
+</code></pre>
+<p>** Typing a number with an operator repeats it that many times. **</p>
+<p>In the combination of the delete operator and a motion mentioned above you
+  insert a count before the motion to delete more:
+     d   number   motion</p>
+<ol>
+<li>
+<p>Move the cursor to the first UPPER CASE word in the line marked ---&gt;.</p>
+</li>
+<li>
+<p>Type  d2w  to delete the two UPPER CASE words.</p>
+</li>
+<li>
+<p>Repeat steps 1 and 2 with a different count to delete the consecutive
+     UPPER CASE words with one command.</p>
+</li>
+</ol>
+<p>---&gt;  this ABC DE line FGHI JK LMN OP of words is Q RS TUV cleaned up.</p>
+<pre><code>             Lesson 2.6: OPERATING ON LINES
+
+
+           ** Type  dd   to delete a whole line. **
+
+  Due to the frequency of whole line deletion, the designers of Vi decided
+  it would be easier to simply type two d's to delete a line.
+
+  1. Move the cursor to the second line in the phrase below.
+  2. Type  dd  to delete the line.
+  3. Now move to the fourth line.
+  4. Type   2dd   to delete two lines.
+
+---&gt;  1)  Roses are red,
+---&gt;  2)  Mud is fun,
+---&gt;  3)  Violets are blue,
+---&gt;  4)  I have a car,
+---&gt;  5)  Clocks tell time,
+---&gt;  6)  Sugar is sweet
+---&gt;  7)  And so are you.
+
+Doubling to operate on a line also works for operators mentioned below.
+
+</code></pre>
+<pre><code>         Lesson 2.7: THE UNDO COMMAND
+</code></pre>
+<p>** Press  u  to undo the last commands,   U  to fix a whole line. **</p>
+<ol>
+<li>Move the cursor to the line below marked ---&gt; and place it on the
+     first error.</li>
+<li>Type  x  to delete the first unwanted character.</li>
+<li>Now type  u  to undo the last command executed.</li>
+<li>This time fix all the errors on the line using the  x  command.</li>
+<li>Now type a capital  U  to return the line to its original state.</li>
+<li>Now type  u  a few times to undo the  U  and preceding commands.</li>
+<li>Now type CTRL-R (keeping CTRL key pressed while hitting R) a few times
+     to redo the commands (undo the undos).</li>
+</ol>
+<p>---&gt; Fiix the errors oon thhis line and reeplace them witth undo.</p>
+<ol>
+<li>These are very useful commands.  Now move on to the lesson 2 Summary.</li>
+</ol>
+<pre><code>                   Lesson 2 SUMMARY
+
+  1. To delete from the cursor up to the next word type:        dw
+  2. To delete from the cursor up to the end of the word type:  de
+  3. To delete from the cursor to the end of a line type:       d$
+  4. To delete a whole line type:                               dd
+
+  5. To repeat a motion prepend it with a number:   2w
+  6. The format for a change command is:
+               operator   [number]   motion
+     where:
+       operator - is what to do, such as  d  for delete
+       [number] - is an optional count to repeat the motion
+       motion   - moves over the text to operate on, such as  w (word),
+          e (end of word),  $ (end of the line), etc.
+
+  7. To move to the start of the line use a zero:  0
+
+  8. To undo previous actions, type:           u  (lowercase u)
+     To undo all the changes on a line, type:  U  (capital U)
+     To undo the undos, type:                  CTRL-R
+
+</code></pre>
+<pre><code>         Lesson 3.1: THE PUT COMMAND
+
+
+   ** Type  p  to put previously deleted text after the cursor. **
+</code></pre>
+<ol>
+<li>
+<p>Move the cursor to the first line below marked ---&gt;.</p>
+</li>
+<li>
+<p>Type  dd  to delete the line and store it in a Vim register.</p>
+</li>
+<li>
+<p>Move the cursor to the c) line, ABOVE where the deleted line should go.</p>
+</li>
+<li>
+<p>Type   p   to put the line below the cursor.</p>
+</li>
+<li>
+<p>Repeat steps 2 through 4 to put all the lines in correct order.</p>
+</li>
+</ol>
+<p>---&gt; d) Can you learn too?
+---&gt; b) Violets are blue,
+---&gt; c) Intelligence is learned,
+---&gt; a) Roses are red,</p>
+<pre><code>               Lesson 3.2: THE REPLACE COMMAND
+
+
+       ** Type  rx  to replace the character at the cursor with  x . **
+
+  1. Move the cursor to the first line below marked ---&gt;.
+
+  2. Move the cursor so that it is on top of the first error.
+
+  3. Type   r   and then the character which should be there.
+
+  4. Repeat steps 2 and 3 until the first line is equal to the second one.
+
+---&gt;  Whan this lime was tuoed in, someone presswd some wrojg keys!
+---&gt;  When this line was typed in, someone pressed some wrong keys!
+
+  5. Now move on to lesson 3.3.
+
+NOTE: Remember that you should be learning by doing, not memorization.
+
+
+
+</code></pre>
+<pre><code>        Lesson 3.3: THE CHANGE OPERATOR
+
+
+   ** To change until the end of a word, type  ce . **
+</code></pre>
+<ol>
+<li>
+<p>Move the cursor to the first line below marked ---&gt;.</p>
+</li>
+<li>
+<p>Place the cursor on the  u  in  lubw.</p>
+</li>
+<li>
+<p>Type  ce  and the correct word (in this case, type  ine ).</p>
+</li>
+<li>
+<p>Press <ESC> and move to the next character that needs to be changed.</p>
+</li>
+<li>
+<p>Repeat steps 3 and 4 until the first sentence is the same as the second.</p>
+</li>
+</ol>
+<p>---&gt; This lubw has a few wptfd that mrrf changing usf the change operator.
+---&gt; This line has a few words that need changing using the change operator.</p>
+<p>Notice that  ce  deletes the word and places you in Insert mode.
+             cc  does the same for the whole line.</p>
+<pre><code>               Lesson 3.4: MORE CHANGES USING c
+
+
+     ** The change operator is used with the same motions as delete. **
+
+  1. The change operator works in the same way as delete.  The format is:
+
+         c    [number]   motion
+
+  2. The motions are the same, such as   w (word) and  $ (end of line).
+
+  3. Move the cursor to the first line below marked ---&gt;.
+
+  4. Move the cursor to the first error.
+
+  5. Type  c$  and type the rest of the line like the second and press &lt;ESC&gt;.
+
+---&gt; The end of this line needs some help to make it like the second.
+---&gt; The end of this line needs to be corrected using the  c$  command.
+
+NOTE:  You can use the Backspace key to correct mistakes while typing.
+
+</code></pre>
+<pre><code>               Lesson 3 SUMMARY
+</code></pre>
+<ol>
+<li>
+<p>To put back text that has just been deleted, type   p .  This puts the
+     deleted text AFTER the cursor (if a line was deleted it will go on the
+     line below the cursor).</p>
+</li>
+<li>
+<p>To replace the character under the cursor, type   r   and then the
+     character you want to have there.</p>
+</li>
+<li>
+<p>The change operator allows you to change from the cursor to where the
+     motion takes you.  eg. Type  ce  to change from the cursor to the end of
+     the word,  c$  to change to the end of a line.</p>
+</li>
+<li>
+<p>The format for change is:</p>
+<p>c   [number]   motion</p>
+</li>
+</ol>
+<p>Now go on to the next lesson.</p>
+<pre><code>          Lesson 4.1: CURSOR LOCATION AND FILE STATUS
+
+  ** Type CTRL-G to show your location in the file and the file status.
+     Type  G  to move to a line in the file. **
+
+  NOTE: Read this entire lesson before executing any of the steps!!
+
+  1. Hold down the Ctrl key and press  g .  We call this CTRL-G.
+     A message will appear at the bottom of the page with the filename and the
+     position in the file.  Remember the line number for Step 3.
+
+NOTE:  You may see the cursor position in the lower right corner of the screen
+       This happens when the 'ruler' option is set (see  :help 'ruler'  )
+
+  2. Press  G  to move you to the bottom of the file.
+     Type  gg  to move you to the start of the file.
+
+  3. Type the number of the line you were on and then  G .  This will
+     return you to the line you were on when you first pressed CTRL-G.
+
+  4. If you feel confident to do this, execute steps 1 through 3.
+
+</code></pre>
+<pre><code>        Lesson 4.2: THE SEARCH COMMAND
+
+
+ ** Type  /  followed by a phrase to search for the phrase. **
+</code></pre>
+<ol>
+<li>
+<p>In Normal mode type the  /  character.  Notice that it and the cursor
+     appear at the bottom of the screen as with the  :  command.</p>
+</li>
+<li>
+<p>Now type 'errroor' <ENTER>.  This is the word you want to search for.</p>
+</li>
+<li>
+<p>To search for the same phrase again, simply type  n .
+     To search for the same phrase in the opposite direction, type  N .</p>
+</li>
+<li>
+<p>To search for a phrase in the backward direction, use  ?  instead of  / .</p>
+</li>
+<li>
+<p>To go back to where you came from press  CTRL-O  (Keep Ctrl down while
+     pressing the letter o).  Repeat to go back further.  CTRL-I goes forward.</p>
+</li>
+</ol>
+<p>---&gt;  "errroor" is not the way to spell error;  errroor is an error.
+NOTE: When the search reaches the end of the file it will continue at the
+      start, unless the 'wrapscan' option has been reset.</p>
+<pre><code>           Lesson 4.3: MATCHING PARENTHESES SEARCH
+
+
+          ** Type  %  to find a matching ),], or } . **
+
+  1. Place the cursor on any (, [, or { in the line below marked ---&gt;.
+
+  2. Now type the  %  character.
+
+  3. The cursor will move to the matching parenthesis or bracket.
+
+  4. Type  %  to move the cursor to the other matching bracket.
+
+  5. Move the cursor to another (,),[,],{ or } and see what  %  does.
+
+---&gt; This ( is a test line with ('s, ['s ] and {'s } in it. ))
+
+
+NOTE: This is very useful in debugging a program with unmatched parentheses!
+
+
+
+</code></pre>
+<pre><code>          Lesson 4.4: THE SUBSTITUTE COMMAND
+
+
+** Type  :s/old/new/g  to substitute 'new' for 'old'. **
+</code></pre>
+<ol>
+<li>
+<p>Move the cursor to the line below marked ---&gt;.</p>
+</li>
+<li>
+<p>Type  :s/thee/the <ENTER>  .  Note that this command only changes the
+     first occurrence of "thee" in the line.</p>
+</li>
+<li>
+<p>Now type  :s/thee/the/g .  Adding the  g  flag means to substitute
+     globally in the line, change all occurrences of "thee" in the line.</p>
+</li>
+</ol>
+<p>---&gt; thee best time to see thee flowers is in thee spring.</p>
+<ol>
+<li>To change every occurrence of a character string between two lines,
+     type   :#,#s/old/new/g    where #,# are the line numbers of the range
+                               of lines where the substitution is to be done.
+     Type   :%s/old/new/g      to change every occurrence in the whole file.
+     Type   :%s/old/new/gc     to find every occurrence in the whole file,
+                       with a prompt whether to substitute or not.</li>
+</ol>
+<pre><code>                   Lesson 4 SUMMARY
+
+
+  1. CTRL-G  displays your location in the file and the file status.
+             G  moves to the end of the file.
+     number  G  moves to that line number.
+            gg  moves to the first line.
+
+  2. Typing  /  followed by a phrase searches FORWARD for the phrase.
+     Typing  ?  followed by a phrase searches BACKWARD for the phrase.
+     After a search type  n  to find the next occurrence in the same direction
+     or  N  to search in the opposite direction.
+     CTRL-O takes you back to older positions, CTRL-I to newer positions.
+
+  3. Typing  %  while the cursor is on a (,),[,],{, or } goes to its match.
+
+  4. To substitute new for the first old in a line type    :s/old/new
+     To substitute new for all 'old's on a line type       :s/old/new/g
+     To substitute phrases between two line #'s type       :#,#s/old/new/g
+     To substitute all occurrences in the file type    :%s/old/new/g
+     To ask for confirmation each time add 'c'         :%s/old/new/gc
+
+</code></pre>
+<pre><code>    Lesson 5.1: HOW TO EXECUTE AN EXTERNAL COMMAND
+</code></pre>
+<p>** Type  :!  followed by an external command to execute that command. **</p>
+<ol>
+<li>
+<p>Type the familiar command  :  to set the cursor at the bottom of the
+     screen.  This allows you to enter a command-line command.</p>
+</li>
+<li>
+<p>Now type the  !  (exclamation point) character.  This allows you to
+     execute any external shell command.</p>
+</li>
+<li>
+<p>As an example type   ls   following the ! and then hit <ENTER>.  This
+     will show you a listing of your directory, just as if you were at the
+     shell prompt.  Or use  :!dir  if ls doesn't work.</p>
+</li>
+</ol>
+<p>NOTE:  It is possible to execute any external command this way, also with
+       arguments.</p>
+<p>NOTE:  All  :  commands must be finished by hitting <ENTER>
+       From here on we will not always mention it.</p>
+<pre><code>              Lesson 5.2: MORE ON WRITING FILES
+
+
+     ** To save the changes made to the text, type  :w FILENAME  **
+
+  1. Type  :!dir  or  :!ls  to get a listing of your directory.
+     You already know you must hit &lt;ENTER&gt; after this.
+
+  2. Choose a filename that does not exist yet, such as TEST.
+
+  3. Now type:   :w TEST   (where TEST is the filename you chose.)
+
+  4. This saves the whole file (the Vim Tutor) under the name TEST.
+     To verify this, type    :!dir  or  :!ls   again to see your directory.
+
+NOTE: If you were to exit Vim and start it again with  vim TEST , the file
+      would be an exact copy of the tutor when you saved it.
+
+  5. Now remove the file by typing (Windows):   :!del TEST
+                or (Unix):  :!rm TEST
+
+
+</code></pre>
+<pre><code>        Lesson 5.3: SELECTING TEXT TO WRITE
+
+
+** To save part of the file, type  v  motion  :w FILENAME **
+</code></pre>
+<ol>
+<li>
+<p>Move the cursor to this line.</p>
+</li>
+<li>
+<p>Press  v  and move the cursor to the fifth item below.  Notice that the
+     text is highlighted.</p>
+</li>
+<li>
+<p>Press the  :  character.  At the bottom of the screen  :'&lt;,'&gt; will appear.</p>
+</li>
+<li>
+<p>Type  w TEST  , where TEST is a filename that does not exist yet.  Verify
+     that you see  :'&lt;,'&gt;w TEST  before you press <ENTER>.</p>
+</li>
+<li>
+<p>Vim will write the selected lines to the file TEST.  Use  :!dir  or  :!ls
+     to see it.  Do not remove it yet!  We will use it in the next lesson.</p>
+</li>
+</ol>
+<p>NOTE:  Pressing  v  starts Visual selection.  You can move the cursor around
+       to make the selection bigger or smaller.  Then you can use an operator
+       to do something with the text.  For example,  d  deletes the text.</p>
+<pre><code>           Lesson 5.4: RETRIEVING AND MERGING FILES
+
+
+       ** To insert the contents of a file, type  :r FILENAME  **
+
+  1. Place the cursor just above this line.
+
+NOTE:  After executing Step 2 you will see text from lesson 5.3.  Then move
+       DOWN to see this lesson again.
+
+  2. Now retrieve your TEST file using the command   :r TEST   where TEST is
+     the name of the file you used.
+     The file you retrieve is placed below the cursor line.
+
+  3. To verify that a file was retrieved, cursor back and notice that there
+     are now two copies of lesson 5.3, the original and the file version.
+
+NOTE:  You can also read the output of an external command.  For example,
+       :r !ls  reads the output of the ls command and puts it below the
+       cursor.
+
+
+</code></pre>
+<pre><code>               Lesson 5 SUMMARY
+</code></pre>
+<ol>
+<li>
+<p>:!command  executes an external command.</p>
+<p>Some useful examples are:
+ (Windows)    (Unix)
+  :!dir        :!ls        -  shows a directory listing.
+  :!del FILENAME   :!rm FILENAME   -  removes file FILENAME.</p>
+</li>
+<li>
+<p>:w FILENAME  writes the current Vim file to disk with name FILENAME.</p>
+</li>
+<li>
+<p>v  motion  :w FILENAME  saves the Visually selected lines in file
+      FILENAME.</p>
+</li>
+<li>
+<p>:r FILENAME  retrieves disk file FILENAME and puts it below the
+      cursor position.</p>
+</li>
+<li>
+<p>:r !dir  reads the output of the dir command and puts it below the
+      cursor position.</p>
+</li>
+</ol>
+<pre><code>             Lesson 6.1: THE OPEN COMMAND
+
+
+ ** Type  o  to open a line below the cursor and place you in Insert mode. **
+
+  1. Move the cursor to the first line below marked ---&gt;.
+
+  2. Type the lowercase letter  o  to open up a line BELOW the cursor and place
+     you in Insert mode.
+
+  3. Now type some text and press &lt;ESC&gt; to exit Insert mode.
+
+---&gt; After typing  o  the cursor is placed on the open line in Insert mode.
+
+  4. To open up a line ABOVE the cursor, simply type a capital  O , rather
+     than a lowercase  o.  Try this on the line below.
+
+---&gt; Open up a line above this by typing O while the cursor is on this line.
+
+
+
+
+</code></pre>
+<pre><code>        Lesson 6.2: THE APPEND COMMAND
+
+
+     ** Type  a  to insert text AFTER the cursor. **
+</code></pre>
+<ol>
+<li>
+<p>Move the cursor to the start of the first line below marked ---&gt;.</p>
+</li>
+<li>
+<p>Press  e  until the cursor is on the end of  li .</p>
+</li>
+<li>
+<p>Type an  a  (lowercase) to append text AFTER the cursor.</p>
+</li>
+<li>
+<p>Complete the word like the line below it.  Press <ESC> to exit Insert
+     mode.</p>
+</li>
+<li>
+<p>Use  e  to move to the next incomplete word and repeat steps 3 and 4.</p>
+</li>
+</ol>
+<p>---&gt; This li will allow you to pract appendi text to a line.
+---&gt; This line will allow you to practice appending text to a line.</p>
+<p>NOTE:  a, i and A all go to the same Insert mode, the only difference is where
+       the characters are inserted.</p>
+<pre><code>            Lesson 6.3: ANOTHER WAY TO REPLACE
+
+
+      ** Type a capital  R  to replace more than one character. **
+
+  1. Move the cursor to the first line below marked ---&gt;.  Move the cursor to
+     the beginning of the first  xxx .
+
+  2. Now press  R  and type the number below it in the second line, so that it
+     replaces the xxx .
+
+  3. Press &lt;ESC&gt; to leave Replace mode.  Notice that the rest of the line
+     remains unmodified.
+
+  4. Repeat the steps to replace the remaining xxx.
+
+---&gt; Adding 123 to xxx gives you xxx.
+---&gt; Adding 123 to 456 gives you 579.
+
+NOTE:  Replace mode is like Insert mode, but every typed character deletes an
+       existing character.
+
+</code></pre>
+<pre><code>        Lesson 6.4: COPY AND PASTE TEXT
+
+
+  ** Use the  y  operator to copy text and  p  to paste it **
+</code></pre>
+<ol>
+<li>
+<p>Move to the line below marked ---&gt; and place the cursor after "a)".</p>
+</li>
+<li>
+<p>Start Visual mode with  v  and move the cursor to just before "first".</p>
+</li>
+<li>
+<p>Type  y  to yank (copy) the highlighted text.</p>
+</li>
+<li>
+<p>Move the cursor to the end of the next line:  j$</p>
+</li>
+<li>
+<p>Type  p  to put (paste) the text.  Then type:  a second <ESC> .</p>
+</li>
+<li>
+<p>Use Visual mode to select " item.", yank it with  y , move to the end of
+     the next line with  j$  and put the text there with  p .</p>
+</li>
+</ol>
+<p>---&gt;  a) this is the first item.
+      b)</p>
+<p>NOTE: You can also use  y  as an operator:  yw  yanks one word,
+        yy  yanks the whole line, then  p  puts that line.</p>
+<pre><code>                Lesson 6.5: SET OPTION
+
+
+      ** Set an option so a search or substitute ignores case **
+
+  1. Search for 'ignore' by entering:  /ignore &lt;ENTER&gt;
+     Repeat several times by pressing  n .
+
+  2. Set the 'ic' (Ignore case) option by entering:   :set ic
+
+  3. Now search for 'ignore' again by pressing  n
+     Notice that Ignore and IGNORE are now also found.
+
+  4. Set the 'hlsearch' and 'incsearch' options:  :set hls is
+
+  5. Now type the search command again and see what happens:  /ignore &lt;ENTER&gt;
+
+  6. To disable ignoring case enter:  :set noic
+
+NOTE:  To remove the highlighting of matches enter:   :nohlsearch
+NOTE:  If you want to ignore case for just one search command, use  \c
+       in the phrase:  /ignore\c &lt;ENTER&gt;
+</code></pre>
+<pre><code>               Lesson 6 SUMMARY
+</code></pre>
+<ol>
+<li>
+<p>Type  o  to open a line BELOW the cursor and start Insert mode.
+     Type  O  to open a line ABOVE the cursor.</p>
+</li>
+<li>
+<p>Type  a  to insert text AFTER the cursor.
+     Type  A  to insert text after the end of the line.</p>
+</li>
+<li>
+<p>The  e  command moves to the end of a word.</p>
+</li>
+<li>
+<p>The  y  operator yanks (copies) text,  p  puts (pastes) it.</p>
+</li>
+<li>
+<p>Typing a capital  R  enters Replace mode until  <ESC>  is pressed.</p>
+</li>
+<li>
+<p>Typing ":set xxx" sets the option "xxx".  Some options are:
+    'ic' 'ignorecase'   ignore upper/lower case when searching
+    'is' 'incsearch'    show partial matches for a search phrase
+    'hls' 'hlsearch'    highlight all matching phrases
+     You can either use the long or the short option name.</p>
+</li>
+<li>
+<p>Prepend "no" to switch an option off:   :set noic</p>
+</li>
+</ol>
+<pre><code>               Lesson 7.1: GETTING HELP
+
+
+              ** Use the on-line help system **
+
+  Vim has a comprehensive on-line help system.  To get started, try one of
+  these three:
+    - press the &lt;HELP&gt; key (if you have one)
+    - press the &lt;F1&gt; key (if you have one)
+    - type   :help &lt;ENTER&gt;
+
+  Read the text in the help window to find out how the help works.
+  Type  CTRL-W CTRL-W   to jump from one window to another.
+  Type    :q &lt;ENTER&gt;    to close the help window.
+
+  You can find help on just about any subject, by giving an argument to the
+  &quot;:help&quot; command.  Try these (don't forget pressing &lt;ENTER&gt;):
+
+    :help w
+    :help c_CTRL-D
+    :help insert-index
+    :help user-manual
+</code></pre>
+<pre><code>          Lesson 7.2: CREATE A STARTUP SCRIPT
+
+
+          ** Enable Vim features **
+</code></pre>
+<p>Vim has many more features than Vi, but most of them are disabled by
+  default.  To start using more features you should create a "vimrc" file.</p>
+<ol>
+<li>
+<p>Start editing the "vimrc" file.  This depends on your system:
+    :e ~/.vimrc     for Unix
+    :e ~/_vimrc     for Windows</p>
+</li>
+<li>
+<p>Now read the example "vimrc" file contents:
+    :r $VIMRUNTIME/vimrc_example.vim</p>
+</li>
+<li>
+<p>Write the file with:
+    :w</p>
+</li>
+</ol>
+<p>The next time you start Vim it will use syntax highlighting.
+  You can add all your preferred settings to this "vimrc" file.
+  For more information type  :help vimrc-intro</p>
+<pre><code>                 Lesson 7.3: COMPLETION
+
+
+          ** Command line completion with CTRL-D and &lt;TAB&gt; **
+
+  1. Make sure Vim is not in compatible mode:  :set nocp
+
+  2. Look what files exist in the directory:  :!ls   or  :!dir
+
+  3. Type the start of a command:  :e
+
+  4. Press  CTRL-D  and Vim will show a list of commands that start with &quot;e&quot;.
+
+  5. Type  d&lt;TAB&gt;  and Vim will complete the command name to &quot;:edit&quot;.
+
+  6. Now add a space and the start of an existing file name:  :edit FIL
+
+  7. Press &lt;TAB&gt;.  Vim will complete the name (if it is unique).
+
+NOTE:  Completion works for many commands.  Just try pressing CTRL-D and
+       &lt;TAB&gt;.  It is especially useful for  :help .
+
+</code></pre>
+<pre><code>               Lesson 7 SUMMARY
+</code></pre>
+<ol>
+<li>
+<p>Type  :help  or press <F1> or <HELP>  to open a help window.</p>
+</li>
+<li>
+<p>Type  :help cmd  to find help on  cmd .</p>
+</li>
+<li>
+<p>Type  CTRL-W CTRL-W  to jump to another window.</p>
+</li>
+<li>
+<p>Type  :q  to close the help window.</p>
+</li>
+<li>
+<p>Create a vimrc startup script to keep your preferred settings.</p>
+</li>
+<li>
+<p>When typing a  :  command, press CTRL-D to see possible completions.
+     Press <TAB> to use one completion.</p>
+</li>
+</ol>
+<pre><code>
+  This concludes the Vim Tutor.  It was intended to give a brief overview of
+  the Vim editor, just enough to allow you to use the editor fairly easily.
+  It is far from complete as Vim has many many more commands.  Read the user
+  manual next: &quot;:help user-manual&quot;.
+
+  For further reading and studying, this book is recommended:
+    Vim - Vi Improved - by Steve Oualline
+    Publisher: New Riders
+  The first book completely dedicated to Vim.  Especially useful for beginners.
+  There are many examples and pictures.
+  See https://iccf-holland.org/click5.html
+
+  This book is older and more about Vi than Vim, but also recommended:
+    Learning the Vi Editor - by Linda Lamb
+    Publisher: O'Reilly &amp; Associates Inc.
+  It is a good book to get to know almost anything you want to do with Vi.
+  The sixth edition also includes information on Vim.
+
+  This tutorial was written by Michael C. Pierce and Robert K. Ware,
+  Colorado School of Mines using ideas supplied by Charles Smith,
+  Colorado State University.  E-mail: bware@mines.colorado.edu.
+
+  Modified for Vim by Bram Moolenaar.
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Joshua Lent
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
