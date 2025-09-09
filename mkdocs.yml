@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: joshIsDev Docs
 site_url: https://wiki.joshualent.com
 site_dir: "site"
 site_author: Joshua Lent
@@ -8,7 +8,7 @@ site_description: >-
 repo_name: joshualent/joshisdev-docs
 repo_url: https://github.com/joshualent/joshisdev-docs
 
-copyright: Copyright &copy; 2025 Joshua Lent
+copyright: Made with ❤️ by Josh
 
 theme:
   name: material
