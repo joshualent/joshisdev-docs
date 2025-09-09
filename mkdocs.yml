@@ -15,23 +15,43 @@ theme:
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/link
+        icon: material/lightbulb-auto
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: deep purple
       accent: blue
       toggle:
-        icon: material/toggle-switch
+        icon: material/lightbulb
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: blue grey
-      accent: teal
+      accent: deep purple
       toggle:
-        icon: material/toggle-switch-off
+        icon: material/lightbulb-outline
         name: Switch to system preference
   font:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.png
+  features:
+    - content.code.copy
+    - content.code.select
+nav:
+  - Index: index.md
+  - DevOps:
+      - devops/git.md
+      - devops/test.md
+markdown_extensions:
+  - def_list
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
