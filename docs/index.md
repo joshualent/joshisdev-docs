@@ -15,7 +15,6 @@ I only occasionally work on these docs so updates and additions will be slow. He
 
 - Docker
  - **Deployment**:
-	- Cloudflare
 	- Domains:
 		- DNS Records
 	- Dokku
